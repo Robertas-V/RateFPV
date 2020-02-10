@@ -1,12 +1,15 @@
 import { Component } from "@angular/core";
 import {
   AngularFirestore,
-  AngularFirestoreDocument
+  AngularFirestoreCollection
 } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
 
 export interface Item {
   name: string;
+  mainImageURL: string;
+  rating: number;
+  raters: number;
 }
 
 @Component({
@@ -17,18 +20,18 @@ export interface Item {
 export class AppComponent {
   title = "Rate FPV";
 
-  private itemDoc: AngularFirestoreDocument<Item>;
-  item: Observable<Item>;
-
-  constructor(private afs: AngularFirestore) {
-    this.itemDoc = afs.doc<Item>("test/FC");
-    this.item = this.itemDoc.valueChanges();
-  }
-  update(item: Item) {
-    this.itemDoc.update(item);
-  }
   // items: Observable<any[]>;
   // constructor(db: AngularFirestore) {
   //   this.items = db.collection("test").valueChanges();
   // }
+
+  private itemsCollection: AngularFirestoreCollection<Item>;
+  items: Observable<Item[]>;
+  constructor(private afs: AngularFirestore) {
+    this.itemsCollection = afs.collection<Item>("cam");
+    this.items = this.itemsCollection.valueChanges();
+  }
+  addItem(item: Item) {
+    this.itemsCollection.add(item);
+  }
 }
