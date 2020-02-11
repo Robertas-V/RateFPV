@@ -4,6 +4,12 @@ import {
   AngularFirestoreCollection
 } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
+import {
+  faPlus,
+  faMinus,
+  faHeart,
+  faHeartBroken
+} from "@fortawesome/free-solid-svg-icons";
 
 export interface Item {
   name: string;
@@ -19,6 +25,10 @@ export interface Item {
 })
 export class AppComponent {
   title = "Rate FPV";
+  faPlus = faPlus;
+  faMinus = faMinus;
+  faHeart = faHeart;
+  faHeartBroken = faHeartBroken;
 
   // items: Observable<any[]>;
   // constructor(db: AngularFirestore) {
