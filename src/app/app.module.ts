@@ -13,6 +13,8 @@ import { environment } from "../environments/environment";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { SharedModule } from "./shared/shared.module";
+import { CoreModule } from "./core/core.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +26,9 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule,
     BrowserAnimationsModule, // imports firebase/storage only needed for storage features
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule,
+    CoreModule
   ],
   providers: [AngularFirestoreModule],
   bootstrap: [AppComponent]
