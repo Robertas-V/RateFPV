@@ -8,7 +8,14 @@ import {
   faPlus,
   faMinus,
   faHeart,
-  faHeartBroken
+  faHeartBroken,
+  faUser,
+  faUserAstronaut,
+  faMedal,
+  faListUl,
+  faListAlt,
+  faSignInAlt,
+  faEnvelopeOpenText
 } from "@fortawesome/free-solid-svg-icons";
 
 export interface Item {
@@ -29,6 +36,13 @@ export class AppComponent {
   faMinus = faMinus;
   faHeart = faHeart;
   faHeartBroken = faHeartBroken;
+  faUser = faUser;
+  faUserAstronaut = faUserAstronaut;
+  faMedal = faMedal;
+  faListUl = faListUl;
+  faListAlt = faListAlt;
+  faSignInAlt = faSignInAlt;
+  faEnvelopeOpenText = faEnvelopeOpenText;
 
   // items: Observable<any[]>;
   // constructor(db: AngularFirestore) {

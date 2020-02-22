@@ -1,69 +1,115 @@
-<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">{{ title }}</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<div
+  class="view "
+  style="background-image: url('https://i2.wp.com/background4free.com/download/blue_purple_red_952572974.jpg?q=100'); background-repeat: no-repeat; background-size: cover; background-position: center center;"
+>
+  <div class="mask rgba-gradient">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+      <a class="navbar-brand fancy-text" href="#"
+        >Rate<span style="color: #FF6663">FPV</span></a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"
-          >Home <span class="sr-only">(current)</span></a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
+      <div
+        class="collapse fancy-text navbar-collapse"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              ><fa-icon [icon]="faMedal"></fa-icon> Contributions<span
+                class="sr-only"
+                >(current)</span
+              ></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              ><fa-icon [icon]="faListUl"></fa-icon>
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">(ANT) Antennas</a>
+              <a class="dropdown-item" href="#">(BAT) Batteries</a>
+              <a class="dropdown-item" href="#">(CAM) Cameras</a>
+              <a class="dropdown-item" href="#"
+                >(ESC) Electronic Speed Controlers</a
+              >
+              <a class="dropdown-item" href="#">(FC) Flight Controlers</a>
+              <a class="dropdown-item" href="#">(FRM) Frames</a>
+              <a class="dropdown-item" href="#">(MOT) Motors</a>
+              <a class="dropdown-item" href="#">(PROP) Propellers</a>
+              <a class="dropdown-item" href="#">(RX) Radio Receivers</a>
+              <a class="dropdown-item" href="#">(TX) Radio transmitters</a>
+              <a class="dropdown-item" href="#">(VTX) Video Transmitters</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">(CRG) Chargers</a>
+              <a class="dropdown-item" href="#">(GOG) Googles</a>
+              <a class="dropdown-item" href="#">(VM) Video Modules</a>
+              <a class="dropdown-item" href="#">(GPS) GPS</a>
+              <a class="dropdown-item" href="#"
+                >(XTM) External Transmitter Modules</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#"
+              ><fa-icon [icon]="faListAlt"></fa-icon> My collection</a
+            >
+          </li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#"
+              ><fa-icon [icon]="faEnvelopeOpenText"></fa-icon> Leave a
+              feedback</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#"
+              ><fa-icon [icon]="faUserAstronaut"></fa-icon> Sign Up</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">
+              <fa-icon [icon]="faSignInAlt"></fa-icon>
+              Login</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--The content below is only a placeholder and can be replaced.-->
+
+    <div class="container">
+      <router-outlet></router-outlet>
+
       <input
-        class="form-control mr-sm-2"
+        id="search-bar"
+        class="form-control"
         type="search"
         placeholder="Search"
         aria-label="Search"
       />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
-      </button>
-    </form>
-  </div>
-</nav>
-<!--The content below is only a placeholder and can be replaced.-->
 
-<div class="container shadow">
-  <router-outlet></router-outlet>
-
-  <!-- <div class="jumbotron">
+      <!-- <div class="jumbotron">
     <h1>Learn to Create Websites</h1>
     <p class="lead">
       In today's world internet is the most popular way of connecting with the
@@ -84,94 +130,124 @@
       >
     </p>
   </div> -->
-  <div class="home-table-container shadow rounded-lg">
-    <h3 class="home-table-cam-header">Top 5 cameras</h3>
-    <table class="table-cam table">
-      <thead>
-        <tr>
-          <th class="text-center">#</th>
-          <th style="width: 85px;">Image</th>
-          <th>Brand</th>
-          <th>Name</th>
-          <th style="width: 85px;">Rating</th>
-          <th style="width: 50px;">Up</th>
-          <th style="width: 50px;">AAA</th>
-          <th style="width: 50px;">Down</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of items | async">
-          <td class="text-center">1</td>
-          <td>
-            <img
-              class="rounded border border-light"
-              alt="{{ item.name }}"
-              src="{{ item.mainImageURL }}"
-            />
-          </td>
+      <div class="home-table-container shadow rounded-lg">
+        <h3 class="float-left home-table-cam-header fancy-text">
+          Top 5 cameras
+        </h3>
+        <h6 class="float-right m-0 p-3">
+          <a href="#">362 items more...</a>
+        </h6>
+        <table class="table-cam table clearfix">
+          <thead>
+            <tr>
+              <th class="text-center" style="width: 85px;"></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th class="d-none d-lg-table-cell"></th>
+              <th class="d-none d-lg-table-cell"></th>
+              <th style="width: 40px;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items | async">
+              <td>
+                <img
+                  class="rounded-circle border border-light"
+                  alt="{{ item.name }}"
+                  src="{{ item.mainImageURL }}"
+                />
+              </td>
 
-          <td>Brand</td>
-          <td>
-            <a href="#">{{ item.name }}</a>
-          </td>
-          <td>{{ item.rating }} ({{ item.raters }})</td>
-          <td><fa-icon [icon]="faHeart"></fa-icon></td>
-          <td>AAA</td>
-          <td><fa-icon [icon]="faHeartBroken"></fa-icon></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+              <td>
+                <a href="#" style="text-shadow: 1px 1px 0px #5f5f5f78;"
+                  >{{ item.name }} (2019)</a
+                ><br />
+                <a href="#">Brand name </a><br />
+                Micro
+              </td>
+              <td class="text-right">
+                Image quality:<br />
+                Durability:<br />
+                Features:
+              </td>
+              <td class="text-left">
+                9.97<br />
+                9.85<br />
+                9.70
+              </td>
+              <td class="text-right d-none d-lg-table-cell">
+                {{ item.rating }} ({{ item.raters }})<br />
+                7g<br />
+                ~37$
+              </td>
 
-  <div class="home-table-container shadow rounded-lg">
-    <h3 class="home-table-vtx-header">Top 5 Video transmitters</h3>
-    <table class="table-vtx table">
-      <thead>
-        <tr>
-          <th class="text-center">#</th>
-          <th style="width: 85px;">Image</th>
-          <th>Brand</th>
-          <th>Name</th>
-          <th style="width: 85px;">Rating</th>
-          <th style="width: 50px;">Up</th>
-          <th style="width: 50px;">AAA</th>
-          <th style="width: 50px;">Down</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of items | async">
-          <td class="text-center">1</td>
-          <td>
-            <img
-              class="rounded border border-light"
-              alt="{{ item.name }}"
-              src="{{ item.mainImageURL }}"
-            />
-          </td>
-
-          <td>Brand</td>
-          <td>
-            <a href="#">{{ item.name }}</a>
-          </td>
-          <td>{{ item.rating }} ({{ item.raters }})</td>
-          <td><fa-icon [icon]="faPlus"></fa-icon></td>
-          <td>AAA</td>
-          <td><fa-icon [icon]="faMinus"></fa-icon></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <hr />
-  <footer>
-    <div class="row">
-      <div class="col-md-6">
-        <p>Copyright © 2019 Tutorial Republic</p>
+              <td class="text-left d-none d-lg-table-cell">
+                :Rating<br />
+                :Weight<br />
+                :Price
+              </td>
+              <td>
+                <a href="#" title="Add to favorites" style="font-size:larger">
+                  <fa-icon class="text-center " [icon]="faHeart"></fa-icon
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="col-md-6 text-md-right">
-        <a href="#" class="text-dark">Terms of Use</a>
-        <span class="text-muted mx-2">|</span>
-        <a href="#" class="text-dark">Privacy Policy</a>
+
+      <div class="home-table-container shadow rounded-lg">
+        <h3 class="home-table-vtx-header">Top 5 Video transmitters</h3>
+        <table class="table-vtx table">
+          <thead>
+            <tr>
+              <th class="text-center">#</th>
+              <th style="width: 85px;">Image</th>
+              <th>Brand</th>
+              <th>Name</th>
+              <th style="width: 85px;">Rating</th>
+              <th style="width: 50px;">Up</th>
+              <th style="width: 50px;">AAA</th>
+              <th style="width: 50px;">Down</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items | async">
+              <td class="text-center">1</td>
+              <td>
+                <img
+                  class="rounded border border-light"
+                  alt="{{ item.name }}"
+                  src="{{ item.mainImageURL }}"
+                />
+              </td>
+
+              <td>Brand</td>
+              <td>
+                <a href="#">{{ item.name }}</a>
+              </td>
+              <td>{{ item.rating }} ({{ item.raters }})</td>
+              <td><fa-icon [icon]="faPlus"></fa-icon></td>
+              <td>AAA</td>
+              <td><fa-icon [icon]="faMinus"></fa-icon></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <hr />
+      <footer>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Copyright © 2019 Tutorial Republic</p>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <a href="#" class="text-dark">Terms of Use</a>
+            <span class="text-muted mx-2">|</span>
+            <a href="#" class="text-dark">Privacy Policy</a>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
+  </div>
 </div>

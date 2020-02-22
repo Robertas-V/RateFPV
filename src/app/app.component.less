@@ -1,7 +1,43 @@
+.rgba-gradient {
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+  background: gradient(
+    linear,
+    45deg,
+    from(rgba(42, 27, 161, 0.7)),
+    to(rgba(29, 210, 177, 0.7))
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+  background: linear-gradient(
+    to 45deg,
+    rgba(42, 27, 161, 0.7),
+    rgba(29, 210, 177, 0.7) 100%
+  );
+}
 .container {
-  background-color: #616161;
+  // background-color: #616161;
 }
 
+#search-bar {
+  margin-top: 7px;
+}
+
+.dropdown-item {
+  padding: 2px 15px;
+  font-size: smaller;
+}
 // Css for home page tables
 
 .home-table-container {
@@ -28,8 +64,34 @@
   vertical-align: middle;
 }
 
+@include media-breakpoint-up(sm) {
+  .h3 {
+    font-size: 1.2rem !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .h3 {
+    font-size: 1.6rem !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .h3 {
+    font-size: 2rem !important;
+  }
+}
+
 .home-table h3 {
   padding: 3px 15px;
+}
+
+.fancy-text {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+    "AppleGothic", sans-serif;
+}
+.home-table-container h3 {
+  padding: 5px 20px;
 }
 
 .home-table-container img {
