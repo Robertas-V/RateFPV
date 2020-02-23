@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SharedModule } from "./shared/shared.module";
 import { CoreModule } from "./core/core.module";
+import { ItemService } from "./core/services/item/item.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +31,7 @@ import { CoreModule } from "./core/core.module";
     SharedModule,
     CoreModule
   ],
-  providers: [AngularFirestoreModule],
+  providers: [AngularFirestoreModule, ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
