@@ -3,10 +3,11 @@ import { CommonModule } from "@angular/common";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { SearchComponent } from "./search/search.component";
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, SearchComponent],
   imports: [CommonModule, FontAwesomeModule],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, SearchComponent]
 })
 export class CoreModule {}
