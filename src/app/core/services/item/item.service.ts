@@ -15,17 +15,15 @@ export interface Item {
   providedIn: "root"
 })
 export class ItemService {
-  private fireStore: AngularFirestore;
   private itemsCollection: AngularFirestoreCollection<Item>;
   items: Observable<Item[]>;
 
-  constructor() {
+  constructor(private fireStore: AngularFirestore) {
     // this.itemsCollection = this.fireStore.collection<Item>("cam");
     // this.items = this.itemsCollection.valueChanges();
   }
 
   getCameras(): Observable<Item[]> {
-    console.log("item.service.ts");
     this.itemsCollection = this.fireStore.collection<Item>("cam");
     this.items = this.itemsCollection.valueChanges();
     return this.items;

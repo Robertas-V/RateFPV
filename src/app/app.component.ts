@@ -1,9 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  AngularFirestore,
-  AngularFirestoreCollection
-} from "@angular/fire/firestore";
-import { Observable } from "rxjs";
+import { AngularFirestore } from "@angular/fire/firestore";
 import {
   faPlus,
   faMinus,
@@ -31,38 +27,18 @@ export class AppComponent implements OnInit {
   faHeart = faHeart;
   faHeartBroken = faHeartBroken;
 
-  // items: Observable<any[]>;
-  // constructor(db: AngularFirestore) {
-  //   this.items = db.collection("test").valueChanges();
-  // }
-
-  // private itemsCollection: AngularFirestoreCollection<Item>;
   items: Item[];
-  constructor(private afs: AngularFirestore, private itemService: ItemService) {
-    // this.itemsCollection = afs.collection<Item>("cam");
-    // this.items = this.itemsCollection.valueChanges();
-    // this.items = itemService.getCameras();
-  }
+  constructor(private itemService: ItemService) {}
   ngOnInit() {
     this.itemService.getCameras().subscribe((res: Item[]) => {
-      // this.items = res;
-      // console.log(this.items);
-      console.log("app.component.ts");
-      console.log(res);
+      res.map(e => {
+        return {
+          name: e.name,
+          mainImageURL: e.mainImageURL,
+          rating: e.rating,
+          raters: e.raters
+        } as Item;
+      });
     });
-
-    // .subscribe(data => {
-    //   this.items = data.map(e => {
-    //     return {
-    //       name: e.name,
-    //       mainImageURL: e.mainImageURL,
-    //       rating: e.rating,
-    //       raters: e.raters
-    //     } as Item;
-    //   });
-    // });
   }
-  // addItem(item: Item) {
-  //   this.itemsCollection.add(item);
-  // }
 }
