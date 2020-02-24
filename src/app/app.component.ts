@@ -7,6 +7,7 @@ import {
   faHeartBroken
 } from "@fortawesome/free-solid-svg-icons";
 import { ItemService } from "./core/services/item/item.service";
+import { Observable } from "rxjs";
 
 export interface Item {
   name: string;
@@ -27,18 +28,20 @@ export class AppComponent implements OnInit {
   faHeart = faHeart;
   faHeartBroken = faHeartBroken;
 
-  items: Item[];
+  // items: Item[] = [];
+  items: Observable<Item[]>;
   constructor(private itemService: ItemService) {}
   ngOnInit() {
-    this.itemService.getCameras().subscribe((res: Item[]) => {
-      res.map(e => {
-        return {
-          name: e.name,
-          mainImageURL: e.mainImageURL,
-          rating: e.rating,
-          raters: e.raters
-        } as Item;
-      });
-    });
+    this.items = this.itemService.getCameras();
+    // this.itemService.getCameras().subscribe((res: Item[]) => {
+    //   res.map(e => {
+    //     return {
+    //       name: e.name,
+    //       mainImageURL: e.mainImageURL,
+    //       rating: e.rating,
+    //       raters: e.raters
+    //     } as Item;
+    //   });
+    // });
   }
 }
