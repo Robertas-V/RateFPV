@@ -1,1 +1,66 @@
-<p>table works!</p>
+<div class="home-table-container shadow rounded-lg">
+  <h3 class="float-left home-table-cam-header fancy-text">
+    Top 5 cameras
+  </h3>
+  <h6 class="float-right m-0 p-3">
+    <a href="#">362 items more...</a>
+  </h6>
+  <table class="table-cam table clearfix">
+    <thead>
+      <tr>
+        <th class="text-center" style="width: 85px;"></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th class="d-none d-lg-table-cell"></th>
+        <th class="d-none d-lg-table-cell"></th>
+        <th style="width: 40px;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items | async">
+        <td>
+          <img
+            class="rounded-circle border border-light"
+            alt="{{ item.name }}"
+            src="{{ item.mainImageURL }}"
+          />
+        </td>
+
+        <td>
+          <a href="#" style="text-shadow: 1px 1px 0px #5f5f5f78;"
+            >{{ item.name }} (2019)</a
+          ><br />
+          <a href="#">Brand name </a><br />
+          Micro
+        </td>
+        <td class="text-right">
+          Image quality:<br />
+          Durability:<br />
+          Features:
+        </td>
+        <td class="text-left">
+          9.97<br />
+          9.85<br />
+          9.70
+        </td>
+        <td class="text-right d-none d-lg-table-cell">
+          {{ item.rating }} ({{ item.raters }})<br />
+          7g<br />
+          ~37$
+        </td>
+
+        <td class="text-left d-none d-lg-table-cell">
+          :Rating<br />
+          :Weight<br />
+          :Price
+        </td>
+        <td>
+          <a href="#" title="Add to favorites" style="font-size:larger">
+            <fa-icon class="text-center " [icon]="faHeart"></fa-icon
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
