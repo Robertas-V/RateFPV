@@ -4,11 +4,20 @@
 >
   <div class="mask rgba-gradient">
     <app-header></app-header>
-
     <div class="container">
       <router-outlet></router-outlet>
       <app-search></app-search>
-      <app-table category="Cameras"></app-table>
+      <app-table shortCategory="ant" rainbow="1"></app-table>
+      <app-table shortCategory="bat" rainbow="2"></app-table>
+      <app-table shortCategory="cam" rainbow="3"></app-table>
+      <app-table shortCategory="esc" rainbow="4"></app-table>
+      <app-table shortCategory="fc" rainbow="5"></app-table>
+      <app-table shortCategory="frm" rainbow="6"></app-table>
+      <app-table shortCategory="mot" rainbow="7"></app-table>
+      <app-table shortCategory="prop" rainbow="8"></app-table>
+      <app-table shortCategory="rx" rainbow="9"></app-table>
+      <app-table shortCategory="tx" rainbow="10"></app-table>
+      <app-table shortCategory="vtx" rainbow="11"></app-table>
 
       <!-- <div class="jumbotron">
     <h1>Learn to Create Websites</h1>
@@ -31,45 +40,6 @@
       >
     </p>
   </div> -->
-
-      <div class="home-table-container shadow rounded-lg">
-        <h3 class="home-table-vtx-header">Top 5 Video transmitters</h3>
-        <table class="table-vtx table">
-          <thead>
-            <tr>
-              <th class="text-center">#</th>
-              <th style="width: 85px;">Image</th>
-              <th>Brand</th>
-              <th>Name</th>
-              <th style="width: 85px;">Rating</th>
-              <th style="width: 50px;">Up</th>
-              <th style="width: 50px;">AAA</th>
-              <th style="width: 50px;">Down</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of items | async">
-              <td class="text-center">1</td>
-              <td>
-                <img
-                  class="rounded border border-light"
-                  alt="{{ item.name }}"
-                  src="{{ item.mainImageURL }}"
-                />
-              </td>
-
-              <td>Brand</td>
-              <td>
-                <a href="#">{{ item.name }}</a>
-              </td>
-              <td>{{ item.rating }} ({{ item.raters }})</td>
-              <td><fa-icon [icon]="faPlus"></fa-icon></td>
-              <td>AAA</td>
-              <td><fa-icon [icon]="faMinus"></fa-icon></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
       <hr />
       <footer>
         <div class="row">

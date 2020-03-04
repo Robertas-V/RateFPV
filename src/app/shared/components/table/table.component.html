@@ -1,11 +1,11 @@
 <div class="home-table-container shadow rounded-lg">
-  <h3 class="float-left home-table-cam-header fancy-text">
-    Top 5 cameras
+  <h3 class="float-left home-table-header-rainbow-{{ rainbow }} fancy-text">
+    Top 5 {{ fullCategory }}
   </h3>
   <h6 class="float-right m-0 p-3">
     <a href="#">362 items more...</a>
   </h6>
-  <table class="table-cam table clearfix">
+  <table class="table-rainbow-{{ rainbow }} table clearfix">
     <thead>
       <tr>
         <th class="text-center" style="width: 85px;"></th>
@@ -28,9 +28,7 @@
         </td>
 
         <td>
-          <a href="#" style="text-shadow: 1px 1px 0px #5f5f5f78;"
-            >{{ item.name }} (2019)</a
-          ><br />
+          <a href="#">{{ item.name }} (2019)</a><br />
           <a href="#">Brand name </a><br />
           Micro
         </td>
