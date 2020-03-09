@@ -7,6 +7,7 @@ import { SearchComponent } from "./search/search.component";
 import { PageNotFound404Component } from "./pages/page-not-found404/page-not-found404.component";
 import { PageHomeComponent } from "./pages/page-home/page-home.component";
 import { SharedModule } from "../shared/shared.module";
+import { PageNewItemComponent } from './pages/page-new-item/page-new-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SharedModule } from "../shared/shared.module";
     FooterComponent,
     SearchComponent,
     PageNotFound404Component,
-    PageHomeComponent
+    PageHomeComponent,
+    PageNewItemComponent
   ],
   imports: [CommonModule, FontAwesomeModule, SharedModule],
   exports: [HeaderComponent, SearchComponent]
