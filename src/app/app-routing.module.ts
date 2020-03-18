@@ -12,7 +12,7 @@ const routes: Routes = [
   //   component: HeroListComponent,
   //   data: { title: 'Heroes List' }
   // },
-  { path: "/new", pathMatch: "full", component: PageNewItemComponent },
+  { path: "new", pathMatch: "full", component: PageNewItemComponent },
   { path: "", pathMatch: "full", component: PageHomeComponent },
   { path: "**", component: PageNotFound404Component }
 ];

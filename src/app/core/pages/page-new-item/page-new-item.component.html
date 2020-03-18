@@ -1,1 +1,185 @@
-<p>page-new-item works!</p>
+<div class="container new-item-container rounded">
+  <form class="mt-2">
+    <h3>Add new item</h3>
+
+    <div class="general-info">
+      
+      <div class="form-row">
+        <div style="padding-left: 5px;">
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />ANT
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />BAT
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />CAM
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />ESC
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />FC
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />FRM
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />MOT
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="optradio"
+              />PROP
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />RX
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />TX
+            </label>
+          </div>
+
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="optradio" />VTX
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col">
+          <div class="form-row">
+            <input
+              type="text"
+              class="form-control"
+              id="brand-name"
+              placeholder="Brand name"
+              name="brand-name"
+            />
+          </div>
+
+          <div class="form-row">
+            <input
+              type="text"
+              class="form-control"
+              id="item-name"
+              placeholder="Item name"
+              name="item-name"
+            />
+          </div>
+
+          <div class="form-row">
+            <input
+              type="text"
+              class="form-control"
+              id="wight"
+              placeholder="Weight (g)"
+              name="wight"
+            />
+          </div>
+
+          <div class="form-row">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Mounting size
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">16x16</a>
+                <a class="dropdown-item" href="#">20x20</a>
+                <a class="dropdown-item" href="#">30x30</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="main-picture-placeholder"
+                  >Main picture</span
+                >
+              </div>
+              <div class="custom-file">
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="main-picture"
+                  aria-describedby="main-picture-placeholder"
+                />
+                <label class="custom-file-label" for="main-picture"
+                  >Choose file</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="checkbox">
+              <label><input type="checkbox" value="" />5v BEC</label>
+            </div>
+            <label for="5V_BEC_A">Amps:</label>
+            <input type="text" class="form-control" id="5V_BEC_A" />
+            <div class="checkbox">
+              <label><input type="checkbox" value="" />9v BEC</label>
+            </div>
+            <label for="9V_BEC_A">Amps:</label>
+            <input type="text" class="form-control" id="9V_BEC_A" />
+            <div class="checkbox disabled">
+              <label><input type="checkbox" value="" disabled />12v BEC</label>
+            </div>
+            <label for="12V_BEC_A">Amps:</label>
+            <input type="text" class="form-control" id="12V_BEC_A" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-row">
+            <img
+              id="main-pic"
+              src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+              class="img-fluid"
+              alt="Responsive image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
