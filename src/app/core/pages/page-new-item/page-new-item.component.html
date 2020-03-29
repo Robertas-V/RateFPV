@@ -1,184 +1,197 @@
-<div class="container new-item-container rounded">
-  <form class="mt-2">
-    <h3>Add new item</h3>
+<div class="container new-item-container">
+  <h1 class="mt-3">Add new item</h1>
+  <form>
+    <H4>Item category</H4>
 
-    <div class="general-info">
-      
-      <div class="form-row">
-        <div style="padding-left: 5px;">
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />ANT
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />BAT
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />CAM
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />ESC
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />FC
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />FRM
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />MOT
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input
-                type="radio"
-                class="form-check-input"
-                name="optradio"
-              />PROP
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />RX
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />TX
-            </label>
-          </div>
-
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optradio" />VTX
-            </label>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <mat-label>Select</mat-label>
+          <mat-select>
+            <mat-option value="ANT">ANT</mat-option>
+            <mat-option value="BAT">BAT</mat-option>
+            <mat-option value="ANT">CAM</mat-option>
+            <mat-option value="ANT">ESC</mat-option>
+            <mat-option value="ANT">FC</mat-option>
+            <mat-option value="ANT">FRM</mat-option>
+            <mat-option value="ANT">MOT</mat-option>
+            <mat-option value="ANT">PROP</mat-option>
+            <mat-option value="ANT">RX</mat-option>
+            <mat-option value="ANT">TX</mat-option>
+            <mat-option value="ANT">VTX</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
+    </div>
 
-      <div class="form-row">
-        <div class="col">
-          <div class="form-row">
-            <input
-              type="text"
-              class="form-control"
-              id="brand-name"
-              placeholder="Brand name"
-              name="brand-name"
-            />
-          </div>
+    <H4>General information</H4>
 
-          <div class="form-row">
-            <input
-              type="text"
-              class="form-control"
-              id="item-name"
-              placeholder="Item name"
-              name="item-name"
-            />
-          </div>
+    <div class="row">
+      <div class="col">
+        <label id="type-radio-group-label">Camera size category</label>
+      </div>
+    </div>
 
-          <div class="form-row">
-            <input
-              type="text"
-              class="form-control"
-              id="wight"
-              placeholder="Weight (g)"
-              name="wight"
-            />
-          </div>
+    <div class="row">
+      <div class="col">
+        <mat-radio-group aria-label="type-radio-group-label">
+          <mat-radio-button value="Nano">Nano</mat-radio-button>
+          <mat-radio-button value="Micro">Micro</mat-radio-button>
+          <mat-radio-button value="Mini">Mini/Standard</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
 
-          <div class="form-row">
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Mounting size
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">16x16</a>
-                <a class="dropdown-item" href="#">20x20</a>
-                <a class="dropdown-item" href="#">30x30</a>
-              </div>
-            </div>
-          </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <mat-form-field>
+          <!-- <mat-label>Brand name</mat-label> -->
+          <input matInput placeholder="Brand name" />
+        </mat-form-field>
+      </div>
+      <div class="col-sm-6">
+        <mat-form-field>
+          <input matInput placeholder="Item name" />
+        </mat-form-field>
+      </div>
+    </div>
 
-          <div class="form-row">
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="main-picture-placeholder"
-                  >Main picture</span
-                >
-              </div>
-              <div class="custom-file">
-                <input
-                  type="file"
-                  class="custom-file-input"
-                  id="main-picture"
-                  aria-describedby="main-picture-placeholder"
-                />
-                <label class="custom-file-label" for="main-picture"
-                  >Choose file</label
-                >
-              </div>
-            </div>
-          </div>
+    <div class="row">
+      <div class="col-2">
+        <mat-form-field>
+          <input matInput placeholder="Weight (g)" />
+        </mat-form-field>
+      </div>
+    </div>
 
-          <div class="form-row">
-            <div class="checkbox">
-              <label><input type="checkbox" value="" />5v BEC</label>
-            </div>
-            <label for="5V_BEC_A">Amps:</label>
-            <input type="text" class="form-control" id="5V_BEC_A" />
-            <div class="checkbox">
-              <label><input type="checkbox" value="" />9v BEC</label>
-            </div>
-            <label for="9V_BEC_A">Amps:</label>
-            <input type="text" class="form-control" id="9V_BEC_A" />
-            <div class="checkbox disabled">
-              <label><input type="checkbox" value="" disabled />12v BEC</label>
-            </div>
-            <label for="12V_BEC_A">Amps:</label>
-            <input type="text" class="form-control" id="12V_BEC_A" />
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-row">
-            <img
-              id="main-pic"
-              src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
-              class="img-fluid"
-              alt="Responsive image"
-            />
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-2">
+        <mat-form-field>
+          <input matInput placeholder="Horizontal Resolution (TVL)" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label id="sensor-radio-group-label">Image sensor</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mat-radio-group aria-label="sensor-radio-group-label">
+          <mat-radio-button value="Nano">CCD</mat-radio-button>
+          <mat-radio-button value="Micro">CMOS</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label>Camera Lens details</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">
+        <mat-checkbox>1.7mm</mat-checkbox>
+      </div>
+      <div class="col-3">
+        <mat-form-field>
+          <input matInput placeholder="FOV°" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">
+        <mat-checkbox>1.8mm</mat-checkbox>
+      </div>
+      <div class="col-3">
+        <mat-form-field>
+          <input matInput placeholder="FOV°" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">
+        <mat-checkbox>2.1mm</mat-checkbox>
+      </div>
+      <div class="col-3">
+        <mat-form-field>
+          <input matInput placeholder="FOV°" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">
+        <mat-checkbox>2.5mm</mat-checkbox>
+      </div>
+      <div class="col-3">
+        <mat-form-field>
+          <input matInput placeholder="FOV°" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <H4>Item images</H4>
+
+    <div class="row">
+      <div class="col">
+        <p>Some description and information about about pinouts.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button mat-stroked-button class="mt-3">Upload</button>
+      </div>
+    </div>
+
+    <H4>Pinout pictures</H4>
+
+    <div class="row">
+      <div class="col">
+        <p>Some description and information about about pinouts.</p>
+        <button mat-stroked-button class="mt-3">Upload</button>
       </div>
     </div>
   </form>
