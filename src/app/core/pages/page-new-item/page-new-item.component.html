@@ -57,7 +57,35 @@
     </div>
 
     <div class="row">
-      <div class="col-2">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <!-- <mat-form-field>
+          <input type="month" matInput placeholder="Release date" />
+        </mat-form-field> -->
+        <mat-form-field>
+          <!-- <!-- <mat-label>Input disabled</mat-label> -->
+          <input matInput [matDatepicker]="dp3" disabled />
+          <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+          <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+        </mat-form-field>
+
+        <!-- <mat-form-field>
+          <mat-label>Month and Year</mat-label>
+          <input matInput [matDatepicker]="dp" [formControl]="date" />
+          <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+          <mat-datepicker
+            #dp
+            startView="multi-year"
+            (yearSelected)="chosenYearHandler($event)"
+            (monthSelected)="chosenMonthHandler($event, dp)"
+            panelClass="example-month-picker"
+          >
+          </mat-datepicker>
+        </mat-form-field> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <mat-form-field>
           <input matInput placeholder="Weight (g)" />
         </mat-form-field>
@@ -65,7 +93,7 @@
     </div>
 
     <div class="row">
-      <div class="col-2">
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <mat-form-field>
           <input matInput placeholder="Horizontal Resolution (TVL)" />
         </mat-form-field>
@@ -89,48 +117,61 @@
 
     <div class="row">
       <div class="col">
+        <label id="sensor-radio-group-label">Signal system</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <mat-checkbox>NTSC</mat-checkbox>
+        <mat-checkbox>PAL</mat-checkbox>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
         <label>Camera Lens details</label>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-1">
+    <div class="row align-items-center">
+      <div class="col-3 col-md-2">
         <mat-checkbox>1.7mm</mat-checkbox>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-md-2">
         <mat-form-field>
           <input matInput placeholder="FOV°" />
         </mat-form-field>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-1">
+    <div class="row align-items-center">
+      <div class="col-3 col-md-2">
         <mat-checkbox>1.8mm</mat-checkbox>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-md-2">
         <mat-form-field>
           <input matInput placeholder="FOV°" />
         </mat-form-field>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-1">
+    <div class="row align-items-center">
+      <div class="col-3 col-md-2">
         <mat-checkbox>2.1mm</mat-checkbox>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-md-2">
         <mat-form-field>
           <input matInput placeholder="FOV°" />
         </mat-form-field>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-1">
+    <div class="row align-items-center">
+      <div class="col-3 col-md-2">
         <mat-checkbox>2.5mm</mat-checkbox>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-md-2">
         <mat-form-field>
           <input matInput placeholder="FOV°" />
         </mat-form-field>
@@ -146,7 +187,7 @@
     </div>
 
     <div class="row">
-      <div class="col-3">
+      <div class="col-sm-6 col-md-3">
         <img
           id="main-pic"
           src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
@@ -154,7 +195,7 @@
           alt="Responsive image"
         />
       </div>
-      <div class="col-3">
+      <div class="col-sm-6 col-md-3">
         <img
           id="main-pic"
           src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
@@ -162,7 +203,7 @@
           alt="Responsive image"
         />
       </div>
-      <div class="col-3">
+      <div class="col-sm-6 col-md-3">
         <img
           id="main-pic"
           src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
@@ -170,7 +211,7 @@
           alt="Responsive image"
         />
       </div>
-      <div class="col-3">
+      <div class="col-sm-6 col-md-3">
         <img
           id="main-pic"
           src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
@@ -191,7 +232,171 @@
     <div class="row">
       <div class="col">
         <p>Some description and information about about pinouts.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img
+          id="main-pic"
+          src="https://imgaz.staticbg.com/thumb/large/oaupload/banggood/images/C4/0F/0e512eee-1804-4dd3-a657-34fa22534b4e.jpg.webp"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
         <button mat-stroked-button class="mt-3">Upload</button>
+      </div>
+    </div>
+
+    <H4>Media reviews (YouTube & blogs)</H4>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>Rotor Riot</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>UAV Features</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>Joshua Bardwell</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>Oscar Liang</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <H4>Links to online shops</H4>
+
+    <div class="row">
+      <div class="col">
+        <label>Affiliate links</label>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>BangGood</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>AliExpress</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>GetFPV</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <mat-checkbox>HobbyKing</mat-checkbox>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="URL" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label>Other online shops</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 col-md-9 col-lg-6">
+        <mat-form-field>
+          <input matInput placeholder="Other shop (URL)" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-right">
+        <button class="mx-3" mat-raised-button disabled>Cancel</button>
+        <button class="mx-1" mat-raised-button color="accent" disabled>
+          Save
+        </button>
+        <button class="mx-1" mat-raised-button color="primary" disabled>
+          Publish
+        </button>
       </div>
     </div>
   </form>
