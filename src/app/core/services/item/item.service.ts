@@ -4,6 +4,7 @@ import {
   AngularFirestoreCollection
 } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
+import { debug } from "util";
 
 export interface Item {
   name: string;
@@ -19,14 +20,18 @@ export class ItemService {
   items: Observable<Item[]>;
 
   constructor(private fireStore: AngularFirestore) {
-    // this.itemsCollection = this.fireStore.collection<Item>("cam");
-    // this.items = this.itemsCollection.valueChanges();
+    this.itemsCollection = this.fireStore.collection<Item>("cam");
+    this.items = this.itemsCollection.valueChanges();
   }
 
   getCameras(): Observable<Item[]> {
-    this.itemsCollection = this.fireStore.collection<Item>("cam");
-    this.items = this.itemsCollection.valueChanges();
+    // this.itemsCollection = this.fireStore.collection<Item>("cam");
+    // this.items = this.itemsCollection.valueChanges();
     return this.items;
+  }
+
+  addItem(item: Item) {
+    this.itemsCollection.add(item);
   }
 
   // createPolicy(policy: Policy){
@@ -40,9 +45,5 @@ export class ItemService {
 
   // deletePolicy(policyId: string){
   //   this.fireStore.doc('policies/' + policyId).delete();
-  // }
-
-  // addItem(item: Item) {
-  //   this.itemsCollection.add(item);
   // }
 }

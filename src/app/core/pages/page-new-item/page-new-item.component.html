@@ -394,7 +394,12 @@
         <button class="mx-1" mat-raised-button color="accent" disabled>
           Save
         </button>
-        <button class="mx-1" mat-raised-button color="primary" disabled>
+        <button
+          class="mx-1"
+          mat-raised-button
+          color="primary"
+          (click)="userSubmit()"
+        >
           Publish
         </button>
       </div>
