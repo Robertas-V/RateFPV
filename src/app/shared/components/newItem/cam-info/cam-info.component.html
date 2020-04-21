@@ -1,0 +1,101 @@
+<div class="row">
+  <div class="col">
+    <label>Camera size type</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <mat-radio-group aria-label="type-radio-group-label">
+      <mat-radio-button value="Nano">Nano</mat-radio-button>
+      <mat-radio-button value="Micro">Micro</mat-radio-button>
+      <mat-radio-button value="Mini">Mini/Standard</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <label id="sensor-radio-group-label">Image sensor</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <mat-radio-group aria-label="sensor-radio-group-label">
+      <mat-radio-button value="Nano">CCD</mat-radio-button>
+      <mat-radio-button value="Micro">CMOS</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <mat-form-field>
+      <input matInput placeholder="Horizontal Resolution (TVL)" />
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <label id="sensor-radio-group-label">Signal system</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <mat-checkbox>NTSC</mat-checkbox>
+    <mat-checkbox>PAL</mat-checkbox>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <label>Camera lens details</label>
+  </div>
+</div>
+
+<div class="row align-items-center h66">
+  <div class="col-3 col-md-2">
+    <mat-checkbox [(ngModel)]="this.camera.lens.mm17">1.7mm </mat-checkbox>
+  </div>
+  <div class="col-3 col-md-2">
+    <mat-form-field *ngIf="this.camera.lens.mm17">
+      <input matInput placeholder="FOV°" />
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row align-items-center h66">
+  <div class="col-3 col-md-2">
+    <mat-checkbox [(ngModel)]="this.camera.lens.mm18">1.8mm </mat-checkbox>
+  </div>
+  <div class="col-3 col-md-2">
+    <mat-form-field *ngIf="this.camera.lens.mm18">
+      <input matInput placeholder="FOV°" />
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row align-items-center h66">
+  <div class="col-3 col-md-2">
+    <mat-checkbox [(ngModel)]="this.camera.lens.mm21">2.1mm </mat-checkbox>
+  </div>
+  <div class="col-3 col-md-2">
+    <mat-form-field *ngIf="this.camera.lens.mm21">
+      <input matInput placeholder="FOV°" />
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="row align-items-center h66">
+  <div class="col-3 col-md-2">
+    <mat-checkbox [(ngModel)]="this.camera.lens.mm25">2.5mm </mat-checkbox>
+  </div>
+  <div class="col-3 col-md-2">
+    <mat-form-field *ngIf="this.camera.lens.mm25">
+      <input matInput placeholder="FOV°" />
+    </mat-form-field>
+  </div>
+</div>

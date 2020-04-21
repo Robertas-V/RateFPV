@@ -8,6 +8,7 @@
         <mat-form-field>
           <mat-label>Select</mat-label>
           <mat-select>
+            <mat-option>None</mat-option>
             <mat-option value="ANT">ANT</mat-option>
             <mat-option value="BAT">BAT</mat-option>
             <mat-option value="ANT">CAM</mat-option>
@@ -24,159 +25,9 @@
       </div>
     </div>
 
-    <H4>General information</H4>
+    <app-general-info></app-general-info>
 
-    <div class="row">
-      <div class="col">
-        <label id="type-radio-group-label">Camera size category</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <mat-radio-group aria-label="type-radio-group-label">
-          <mat-radio-button value="Nano">Nano</mat-radio-button>
-          <mat-radio-button value="Micro">Micro</mat-radio-button>
-          <mat-radio-button value="Mini">Mini/Standard</mat-radio-button>
-        </mat-radio-group>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6">
-        <mat-form-field>
-          <!-- <mat-label>Brand name</mat-label> -->
-          <input matInput placeholder="Brand name" />
-        </mat-form-field>
-      </div>
-      <div class="col-sm-6">
-        <mat-form-field>
-          <input matInput placeholder="Item name" />
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <!-- <mat-form-field>
-          <input type="month" matInput placeholder="Release date" />
-        </mat-form-field> -->
-        <mat-form-field>
-          <!-- <!-- <mat-label>Input disabled</mat-label> -->
-          <input matInput [matDatepicker]="dp3" disabled />
-          <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
-          <mat-datepicker #dp3 disabled="false"></mat-datepicker>
-        </mat-form-field>
-
-        <!-- <mat-form-field>
-          <mat-label>Month and Year</mat-label>
-          <input matInput [matDatepicker]="dp" [formControl]="date" />
-          <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
-          <mat-datepicker
-            #dp
-            startView="multi-year"
-            (yearSelected)="chosenYearHandler($event)"
-            (monthSelected)="chosenMonthHandler($event, dp)"
-            panelClass="example-month-picker"
-          >
-          </mat-datepicker>
-        </mat-form-field> -->
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <mat-form-field>
-          <input matInput placeholder="Weight (g)" />
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <mat-form-field>
-          <input matInput placeholder="Horizontal Resolution (TVL)" />
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <label id="sensor-radio-group-label">Image sensor</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <mat-radio-group aria-label="sensor-radio-group-label">
-          <mat-radio-button value="Nano">CCD</mat-radio-button>
-          <mat-radio-button value="Micro">CMOS</mat-radio-button>
-        </mat-radio-group>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <label id="sensor-radio-group-label">Signal system</label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <mat-checkbox>NTSC</mat-checkbox>
-        <mat-checkbox>PAL</mat-checkbox>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <label>Camera Lens details</label>
-      </div>
-    </div>
-
-    <div class="row align-items-center">
-      <div class="col-3 col-md-2">
-        <mat-checkbox>1.7mm</mat-checkbox>
-      </div>
-      <div class="col-3 col-md-2">
-        <mat-form-field>
-          <input matInput placeholder="FOV°" />
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class="row align-items-center">
-      <div class="col-3 col-md-2">
-        <mat-checkbox>1.8mm</mat-checkbox>
-      </div>
-      <div class="col-3 col-md-2">
-        <mat-form-field>
-          <input matInput placeholder="FOV°" />
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class="row align-items-center">
-      <div class="col-3 col-md-2">
-        <mat-checkbox>2.1mm</mat-checkbox>
-      </div>
-      <div class="col-3 col-md-2">
-        <mat-form-field>
-          <input matInput placeholder="FOV°" />
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class="row align-items-center">
-      <div class="col-3 col-md-2">
-        <mat-checkbox>2.5mm</mat-checkbox>
-      </div>
-      <div class="col-3 col-md-2">
-        <mat-form-field>
-          <input matInput placeholder="FOV°" />
-        </mat-form-field>
-      </div>
-    </div>
+    <app-cam-info [cameraDet]="cameraz"> </app-cam-info>
 
     <H4>Item images</H4>
 
